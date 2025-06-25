@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import TypingText from "../components/TypingText";
 
 export default function ChatPage() {
     const [response, setResponse] = React.useState('');
@@ -40,7 +41,10 @@ export default function ChatPage() {
                 </button>
             </form>
             <div>
-                <p>{response}</p>
+                <TypingText
+                    text={response}
+                    speed={50}
+                />
             </div>
         </div>
     );
